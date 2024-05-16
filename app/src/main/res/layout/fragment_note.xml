@@ -4,11 +4,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.note.NoteFragment">
+    <!--    android:gravity="center"-->
+    <!--    android:orientation="vertical"-->
+    <!--    android:padding="16dp"-->
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+<!--    <EditText-->
+<!--        android:id="@+id/ed_text"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Введите текст" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/save_text"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:textSize="24sp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/save_btn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:text="Сохранить" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_note"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_add"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </FrameLayout>
