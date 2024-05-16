@@ -7,6 +7,7 @@ pluginManagement {
                 includeGroupByRegex("androidx.*")
             }
         }
+        google()
         mavenCentral()
         gradlePluginPortal()
     }
@@ -21,4 +22,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "NoteApp67"
 include(":app")
+include(":dots-tab-layout")
+
  

@@ -9,6 +9,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.noteapp67.R
 import com.example.noteapp67.databinding.FragmentOnBoardBinding
 import com.example.noteapp67.ui.adapter.OnBoardViewPagerAdapter
+import com.google.android.material.tabs.TabLayoutMediator
 
 class OnBoardFragment : Fragment() {
 
@@ -26,6 +27,7 @@ class OnBoardFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initialize()
         setupListener()
+        tabLayout()
     }
 
     private fun initialize() {
@@ -48,5 +50,10 @@ class OnBoardFragment : Fragment() {
                 setCurrentItem(currentItem + 2 , true)
             }
         }
+    }
+
+    private fun tabLayout() {
+        TabLayoutMediator(binding.tabLayout, binding.viewPager2) { _, _ ->
+        }.attach()
     }
 }
