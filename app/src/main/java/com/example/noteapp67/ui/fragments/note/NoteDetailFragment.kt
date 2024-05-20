@@ -5,8 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import com.example.noteapp67.App
 import com.example.noteapp67.R
 import com.example.noteapp67.data.extensions.setBackStackData
+import com.example.noteapp67.data.models.NoteModel
 import com.example.noteapp67.databinding.FragmentDetailBinding
 
 class NoteDetailFragment : Fragment() {
@@ -17,7 +20,7 @@ class NoteDetailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentDetailBinding.inflate(inflater, container,false)
+        binding = FragmentDetailBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -28,8 +31,10 @@ class NoteDetailFragment : Fragment() {
 
     private fun setupListeners() {
         binding.btnAddText.setOnClickListener {
-            val et = binding.etAdd.text.toString()
-            setBackStackData("key", et, true)
+            val etTitle = binding.etTitle.text.toString()
+            val etDescription = binding.etDescription.text.toString()
+            App().getInstance()?.noteDao()?.insertNote(NoteModel(etTitle, etDescription))
+            findNavController().navigateUp()
         }
     }
 }
