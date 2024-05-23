@@ -4,36 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.note.NoteFragment">
-    <!--    android:gravity="center"-->
-    <!--    android:orientation="vertical"-->
-    <!--    android:padding="16dp"-->
-
-<!--    <EditText-->
-<!--        android:id="@+id/ed_text"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:hint="Введите текст" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/save_text"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:layout_marginTop="15dp"-->
-<!--        android:textSize="24sp" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/save_btn"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:layout_marginTop="15dp"-->
-<!--        android:text="Сохранить" />-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_note"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+    
+    <ImageView
+        android:src="@drawable/shapeeeee"
+        android:layout_gravity="end"
+        android:layout_margin="16dp"
+        android:id="@+id/btn_change_layout"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_add"
