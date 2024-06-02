@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.marginBottom
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.navOptions
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.noteapp67.App
@@ -49,7 +50,14 @@ class NoteFragment : Fragment(), OnClickItem {
 
     private fun setupListeners() = with(binding) {
         btnAdd.setOnClickListener {
-            findNavController().navigate(R.id.action_noteFragment_to_noteDetailFragment)
+            findNavController().navigate(R.id.action_noteFragment_to_noteDetailFragment,
+//                navOptions{
+//                    anim {
+//                        enter = R.anim.slide_in_right
+//                        exit = R.anim.slide_out_right
+//                    }
+//                }
+            )
         }
         btnChangeLayout.setOnClickListener {
             isGridLayout = !isGridLayout
